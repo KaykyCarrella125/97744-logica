@@ -1,0 +1,22 @@
+import os 
+
+os.system("clear") #limpa o terminal. 
+
+#solicitando dados (entrada)
+valor = int(input("digite um valor: "))
+
+#verificanado (processamento)
+if valor == 10:
+    print("E IGUAL A 10 ")
+
+if valor < 10:
+   print("NÃO MAIOR que 10!")
+
+if valor > 10:
+    print("E MENOR QUE 10")
+
+    #Exibindo dados (saida)
+    print("==fim==")
+
+
+

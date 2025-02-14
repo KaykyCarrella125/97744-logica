@@ -1,0 +1,24 @@
+import os
+
+os.system("clear") #limpar o terminal.
+
+#solicitando dados (entrega)
+print()
+nota_1 = int(input("digite sua nota: "))
+print()
+nota_2 = int(input("digite sua nota: "))
+print()
+nota_3 = int(input("digite sua nota: "))
+
+media = (nota_1 + nota_2 + nota_3) / 3 
+
+#exibindo dados (saida)
+
+print()
+print(f"media: {media}")
+
+if media > 7: 
+    print("aprovado")
+
+else:
+    print("reprovado")
