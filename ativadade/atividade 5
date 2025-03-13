@@ -5,8 +5,8 @@ os.system("clear")  #limpa o terminal.
 login_cadastrado = "aluno"
 senha_cadastrada = "123"
 
-login = float(input("digite seu login: "))
-senha = float(input("digite sua senha: "))
+login = input("digite seu login: ")
+senha = input("digite sua senha: ")
 
 if login_cadastrado == login and senha_cadastrada == senha: 
     print("bem-vindo!")
