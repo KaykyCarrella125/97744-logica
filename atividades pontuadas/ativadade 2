@@ -1,0 +1,30 @@
+import os 
+
+os.system("clear")
+
+nome = str(input("digite o seu nome: "))
+
+sexo = str(input("digite seu sexo : ")).lower()
+
+print()
+
+match sexo:
+    case "f":
+        estado_civil = str(input("digite seu estado civil: ")).lower()
+        if estado_civil == "casada":
+            ano = int(input("digite o ano de casados: "))
+            print(f"{nome} do sexo {sexo} e {estado_civil} a {ano} anos")
+        else:
+            print(f"{nome}estado civil solteira(o)")
+    case "m":
+        estado_civil = str(input("digite seu estado civil: ")).lower()
+        if estado_civil == "casado":
+            ano = int(input("digite o ano de casados: "))
+            print(f"{nome} do sexo {sexo} e {estado_civil} a {ano} anos")
+        else:
+            print(f"{nome}estado civil solteira(o)")
+    case _:
+        print("algo esta errado:")
+
+
+

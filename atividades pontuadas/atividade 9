@@ -1,0 +1,15 @@
+import os
+os.system("clear")
+
+renda_mensal = float(input("digite o valor da renda: "))
+
+valor_emprestimo = float(input("digite o valor do emprestimo: "))
+
+num_prestaçoes = float(input("digite o numero das prestações: "))
+
+valor_prestaçao = (valor_emprestimo / num_prestaçoes)
+
+if valor_emprestimo <= 10 * renda_mensal and valor_prestaçao <= 0.30 * renda_mensal:
+    print("emprestimo autoriazado!")
+else:
+    print("emprestimo não autorizado")

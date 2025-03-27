@@ -1,0 +1,43 @@
+import os 
+
+os.system("clear")
+
+print(""""
+=========== Posto De Combustivel Preços==========
+A = Ácool 3.79R$
+G = Gasolina 6.56R$
+      """)
+print()
+combustivel = input("digite o tipo de combustivel que deseja abastecer: ").upper()
+litros = float(input("digite a quantidade de litros que deseja abastecer: "))
+
+print()
+
+if combustivel == "A":
+    valor = 3.79
+    tipo = "Álcool"
+elif combustivel == "G":
+    valor = 6.56
+    tipo = "gasolina"
+
+match combustivel:
+    case "A":
+        if litros <= 25:
+            desconto = valor * 0.02
+        else:
+            desconto = valor * 0.04
+    case "G":
+        if litros <= 25:
+            desconto = valor * 0.03
+        else:
+            desconto = valor * 0.05
+    case _:
+        print("combustivel indisponivel. ")
+        exit()
+
+total = valor * litros
+final = total - desconto
+print(f"O valor total a ser pago é de R${final:.2f} no(a) {tipo}")
+print(f"O senhor(a) absteceu: {litros}L")
+
+    

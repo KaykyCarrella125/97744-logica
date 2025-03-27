@@ -1,0 +1,22 @@
+import os
+
+os.system("cls || clear")
+
+login = "kayky"
+senha = "leoazinha123"
+
+for i in range(3):
+        l = str(input("Digite seu login: "))
+        s = str(input("Digite sua senha: "))
+
+        if senha == s and login == l:
+            print("Login bem-sucedido, seu gostoso!")
+            break
+        else:
+            print("Acesso negado, seu merda vagabundo")
+else:
+    print("excesso de tentativas, haha otario") 
+
+           
+        
+        

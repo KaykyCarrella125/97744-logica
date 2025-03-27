@@ -1,6 +1,6 @@
 import os
 
-os.system("clear")  #limpa o terminal.
+os.system("clear")  
 
 login_cadastrado = "aluno"
 senha_cadastrada = "123"
@@ -12,9 +12,3 @@ if login_cadastrado == login and senha_cadastrada == senha:
     print("bem-vindo!")
 else: 
     print("login ou senha invalidos!")
-
-
-
-
-
-

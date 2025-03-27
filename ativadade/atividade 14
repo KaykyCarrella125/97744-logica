@@ -1,0 +1,52 @@
+import os
+
+os.system("clear")
+
+print("""
+=========== ANO ============
+1   \tJaneiro
+2   \tFevereiro
+3   \tMarço
+4   \tAbril 
+5   \tMaio
+6   \tJunho
+7   \tJulho
+8   \tAgosto
+9   \tSetembro
+10  \tOutubro
+11  \tNovembro
+12  \tDezembro
+""")
+
+mês = int(input("digite um numero para o mes do ano: "))
+
+match mês:
+    case 1:
+        resultado = "janeiro"
+    case 2:
+        resultado = "fevereiro"
+    case 3: 
+        resultado = "março"
+    case 4:
+        resultado = "abril"
+    case 5:
+        resultado = "maio"
+    case 6:
+        resultado = "junho"
+    case 7:
+        resultado = "julho"
+    case 8: 
+        resultado = "agosto"
+    case 9:
+        resultado = "setempro"
+    case 10: 
+        resultado = "outubro"
+    case 11: 
+        resultado = "novembro"
+    case 12: 
+        resultado = "dezembro"
+    case _:
+        resultado = "opção inválida."
+
+print()
+print(f"resultado: {resultado}") 

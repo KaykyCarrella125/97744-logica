@@ -1,0 +1,55 @@
+import os
+
+os.system("cls || clear")
+
+menu = {
+    1: ("Picanha", 65.99),
+    2: ("Lasanha", 55.99),
+    3: ("Strogonoff", 75.99),
+    4: ("Bife Acebolado", 84.99),
+    5: ("Pão com Ovo", 200.99)
+}
+
+pedido = {}
+
+while True:
+    
+    print("\nMenu do Restaurante:")
+    for codigo, (prato, valor) in menu.items():
+        print(f"{codigo} - {prato} - R${valor:.2f}")
+
+    
+    escolha = int(input("Digite o código do prato desejado: "))
+    
+    if escolha in menu:
+        prato, valor = menu[escolha]
+
+        if prato in pedido:
+            pedido[prato]["quantidade"] += 1
+        else:
+            pedido[prato] = {"valor": valor, "quantidade": 1}
+
+        print(f"Você adicionou: {prato} - R${valor:.2f}")
+    else:
+        print("Código inválido, tente novamente.")
+
+    continuar = input("Deseja escolher outro prato? (sim/não): ").strip().lower()
+    if continuar != 'sim':
+        break
+
+print("\nResumo do Pedido:")
+total = 0
+for prato, dados in pedido.items():
+    subtotal = dados["valor"] * dados["quantidade"]
+    total += subtotal
+    print(f"{prato} - {dados['quantidade']}x - R${subtotal:.2f}")
+
+print(f"Total: R${total:.2f}")
+
+gorjeta = input("Deseja pagar 10% de gorjeta? (sim/não): ").strip().lower()
+if gorjeta == 'sim':
+    taxa = total * 0.10
+    total += taxa
+    print(f"Gorjeta de 10%: R${taxa:.2f}")
+
+print(f"Valor total a pagar: R${total:.2f}") 

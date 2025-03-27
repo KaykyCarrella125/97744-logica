@@ -1,0 +1,26 @@
+import os
+
+os.system("cls || clear")
+
+
+while True:
+    print("""
+\nCodigo | Descrição
+    \n1  | Adicionar pessoa
+    \n2  | Exibir resultados
+    \n3  | sair
+""")
+    codigo = int(input("adicione o codigo: "))
+    match codigo: 
+        case 1:
+            idade = int(input("Idade: "))
+            sexo = int(input("M/F: "))
+
+            salario = int(input("Salario da pessoa: "))
+            salario2 += salario
+            contador += 1
+
+        case 3:
+            break
+
+.

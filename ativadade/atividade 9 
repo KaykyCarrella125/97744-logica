@@ -1,0 +1,21 @@
+import os
+
+os.system("clear")
+
+
+
+primeiro_n = int(input("insira o primeiro numero: "))
+segundo_n = int(input("insira o segundo numero: "))
+terceiro_n = int(input("insira o terceiro numero: "))
+
+maior_numero = max (primeiro_n, segundo_n, terceiro_n)
+menor_numero = min (primeiro_n, segundo_n, terceiro_n)
+
+print()
+print(f"primeiro numero: {primeiro_n}")
+print(f"segundo numero: {segundo_n}")
+print(f"terceiro numero: {terceiro_n}")
+print()
+print(f"maior numero: {maior_numero}")
+print(f"menor numero: {menor_numero}")
+                      

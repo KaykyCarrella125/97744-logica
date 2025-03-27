@@ -1,0 +1,18 @@
+import os
+os.system("clear")
+
+cor = input("digite a cor do cd: ").lower()
+
+if cor == "vermelho": 
+    preco = 10.00
+elif cor == "azul":
+    preco = 25.00
+elif cor == "verde":
+    preco = 40.00
+elif cor == "amarelo":
+    preco = 30.00
+
+else:
+    preco = "cor inválida"
+
+print(f"o preço do CD é: {preco}")

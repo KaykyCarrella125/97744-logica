@@ -2,7 +2,7 @@ import os
 
 os.system("clear") #limpa o terminal. 
 
-#solicitando dados (entrada)
+
 
 idade = int(input("digite sua idade: "))
 

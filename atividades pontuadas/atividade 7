@@ -1,0 +1,23 @@
+import os
+os.system("clear")
+
+nome_produto = input("digite a descrição de produto: ")
+
+quantidade = int(input("digite a quantidade adquirida: "))
+
+preco_unitario = float(input("digite o preço unitario: "))
+
+total = quantidade * preco_unitario
+
+if quantidade <= 5:
+    desconto = total * 0.02
+elif quantidade <= 10:
+    desconto = total * 0.03
+else:
+    desconto = total * 0.05
+
+total_a_pagar = total - desconto
+
+print(F"total: R${total: 2f}")
+print(F"desconto: R${desconto: .2f}")
+print(f"total a pagar: R${total_a_pagar}")
