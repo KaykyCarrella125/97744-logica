@@ -1,0 +1,16 @@
+import os 
+
+os.system("cls || clear")
+
+def positivo_ou_negativo(nume):
+    if nume > 0:
+        print("Esse numero é Positivo")
+    elif nume == 0:
+        print("Esse numero é Neutro")
+
+    else:
+        print("Esse número é Negativo")
+
+
+nume = int(input("Digite um numero: "))
+positivo_ou_negativo(nume)

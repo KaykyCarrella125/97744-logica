@@ -1,0 +1,12 @@
+import os
+
+os.system("cls || clear")
+
+def par_ou_impar(nume):
+    if nume % 2 == 0:
+        print("Esse número é par: ")
+    else:
+        print("Esse número é ímpar: ")
+
+nume = int(input("Digite um numero: "))
+par_ou_impar(nume)
