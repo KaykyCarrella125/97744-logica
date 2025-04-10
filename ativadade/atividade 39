@@ -1,0 +1,38 @@
+import os
+os.system("cls || clear")
+
+def somar(n1, n2):
+    calcular = n1 + n2
+    return calcular
+
+def subtrair(n1, n2):
+    calcular = n1 - n2
+    return calcular
+
+def multiplicar(n1, n2):
+    calcular = n1 * n2
+    return calcular
+
+def dividir(n1, n2):
+    calcular = n1 / n2
+    return calcular
+
+def medir(n1, n2):
+    calcular = n1 + n2 / 2
+    return calcular
+
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+
+soma = somar(n1,n2)
+subtracao = subtrair(n1,n2)
+multiplicação = multiplicar(n1,n2)
+divisão = dividir(n1,n2)
+media = medir(n1,n2)
+
+print()
+print(f"soma: {soma}")
+print(f"subtração: {subtracao}")
+print(f"multiplicação: {multiplicação}")
+print(f"divição: {divisão:.2f}")
+print(f"media: {media}")

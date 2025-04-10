@@ -1,0 +1,31 @@
+import os
+os.system("cls || clear")
+
+lista_notas = []
+
+def calcular_media(nota1, nota2):
+    return (nota1 + nota2) / 2
+
+def verificar_aprovacao(media):
+    if media >= 7:
+        return "Aluno esta aprovado. Parabens meu mano!"
+    elif media >= 5:
+        return "Aluno esta em recuperação. 50 conto a recu viu pai!"
+    else:
+        return "Aluno esta reprovado. vai tomar um piu da mãe hein!"
+
+for i in range(4):
+    nota = float(input("Digite uma nota: "))
+    lista_notas.append(nota)
+
+media = sum(lista_notas) / 4
+
+print()
+for nota in lista_notas:
+    print(f"Nota: {nota:.1f}")
+
+print()
+print(f"Média: {media:.1f}")
+print()
+print(verificar_aprovacao(media))
+

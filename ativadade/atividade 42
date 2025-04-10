@@ -1,0 +1,13 @@
+import os
+os.system("cls || clear")
+
+def M(n1):
+    calculo = n1 * 10
+    segundo_calculo = calculo * 10
+    return segundo_calculo
+
+n1 = int(input("Digite a quantidade em metros: "))
+
+valor = M(n1)
+
+print(f"quantidade em centimetros: {valor}")

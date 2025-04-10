@@ -1,0 +1,13 @@
+import os
+os.system("cls || clear")
+
+def medir(n1, n2):
+    calcular = (n1 + n2) / 2
+    return calcular
+
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+
+media = medir(n1,n2)
+
+print(f"media: {media}")
