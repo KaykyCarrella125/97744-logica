@@ -1,0 +1,18 @@
+import os
+os.system("cls || clear")
+
+nume = []
+
+
+for i in range(5):
+    numero = int(input(f"Digite o {i+1}º numero: "))
+    nume.append(numero)
+
+maior = min(nume)
+menor = max(nume)
+
+print()
+print("Número informado:", nume)
+print()
+print("Menor número:", menor)
+print("Maior números:", maior)

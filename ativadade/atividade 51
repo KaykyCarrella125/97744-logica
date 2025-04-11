@@ -1,0 +1,65 @@
+import os 
+os.system("cls || clear")
+
+
+codigos = [1, 2, 3, 4, 5]
+pratos = ["Picanha", "Lasanha", "Strogonoff", "Bife Acebolado", "Pão com Ovo"]
+valores = [65.99, 55.99, 75.99, 84.99, 200.99]
+
+
+pedidos = []
+quantidades = []
+precos = []
+
+
+print("Menu do Restaurante:")
+for i in range(len(codigos)):
+    print(f"{codigos[i]} - {pratos[i]} - R${valores[i]:.2f}")
+
+
+while True:
+    try:
+        codigo = int(input("\nDigite o código do prato desejado: "))
+    except ValueError:
+        print("Por favor, digite um número válido.")
+        continue
+
+    if codigo in codigos:
+        indice = codigos.index(codigo)
+        nome_prato = pratos[indice]
+        preco_prato = valores[indice]
+
+        if nome_prato in pedidos:
+            posicao = pedidos.index(nome_prato)
+            quantidades[posicao] += 1
+        else:
+            pedidos.append(nome_prato)
+            quantidades.append(1)
+            precos.append(preco_prato)
+
+        print(f"Você adicionou: {nome_prato} - R${preco_prato:.2f}")
+    else:
+        print("Código inválido. Tente novamente.")
+
+    continuar = input("Deseja adicionar outro prato? (sim/não): ").lower()
+    if continuar != "sim":
+        break
+
+
+print("\nResumo do Pedido:")
+total = 0
+for i in range(len(pedidos)):
+    subtotal = quantidades[i] * precos[i]
+    print(f"{pedidos[i]} - {quantidades[i]}x - R${subtotal:.2f}")
+    total += subtotal
+
+print(f"\nTotal: R${total:.2f}")
+
+
+gorjeta = input("Deseja pagar 10% de gorjeta? (sim/não): ").lower()
+if gorjeta == "sim":
+    taxa = total * 0.10
+    total += taxa
+    print(f"Gorjeta: R${taxa:.2f}")
+
+print(f"Valor total a pagar: R${total:.2f}")

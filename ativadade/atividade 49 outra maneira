@@ -1,0 +1,29 @@
+import os
+
+def limpar_tela():
+    os.system("cls || clear")
+
+def ler_numeros(quantidade):
+    numeros = []
+    for i in range(quantidade):
+        numero = int(input(f"Digite o {i+1}º número: "))
+        numeros.append(numero)
+    return numeros
+
+def mostrar_resultados(numeros):
+    menor = min(numeros)
+    maior = max(numeros)
+
+    print()
+    print("Números informados:", numeros)
+    print()
+    print("Menor número:", menor)
+    print("Maior número:", maior)
+
+def main():
+    limpar_tela()
+    lista_numeros = ler_numeros(5)
+    mostrar_resultados(lista_numeros)
+
+if __name__ == "__main__":
+    main()
