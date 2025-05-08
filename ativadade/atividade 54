@@ -1,0 +1,33 @@
+import os
+from dataclasses import dataclass
+
+os.system("cls || clear")
+
+@dataclass
+class Endereço:
+     # Variáveis = Atributos.
+    logradouro: str
+    numero: int
+
+@dataclass
+class Pessoa:
+    # Variáveis = Atributos.
+    nome: str
+    idade: int
+    endereço: Endereço
+
+    # Função = Método.
+    def exibir_dados(self):
+        print(f"Nome: {self.nome}")
+        print(f"\nIdade; {self.idade}")
+        print(f"\nEndereço: {self.endereço.logradouro}, número: {self.endereço.numero}")
+
+# Aplicando características da classe.
+endereco1 = Endereço("Rua Gracio", 9)
+pessoa1 = Pessoa("Kayky", 20, endereco1)
+pessoa1.exibir_dados()
+
+print()
+endereco2 = Endereço("Rua vila lobos", 47)
+pessoa2 = Pessoa("lucas", 25, endereco2)
+pessoa2.exibir_dados()

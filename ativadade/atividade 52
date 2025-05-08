@@ -1,0 +1,25 @@
+import os
+os.system("cls || clear")
+
+def obter_numero(indice):
+    """Solicita ao usuário um número e retorna 0 se for negativo."""
+    numero = int(input(f"Digite o {indice}º número: "))
+    if numero < 0:
+        return 0
+    return numero
+
+def exibir_vetor(vetor):
+    """Exibe os valores armazenados no vetor."""
+    print("\nValores do vetor:")
+    for valor in vetor:
+        print(valor, end=" ")
+
+def main():
+    """Função principal que coordena a execução do programa."""
+    vetor = []
+    for i in range(1, 6):
+        vetor.append(obter_numero(i))
+    exibir_vetor(vetor)
+
+if __name__ == "__main__":
+    main()
