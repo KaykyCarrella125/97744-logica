@@ -1,0 +1,34 @@
+import os 
+from dataclasses import dataclass
+os.system("cls || clear")
+
+
+nome_autor = input("Digite o nome do autor: ")
+biografia_autor = input("Digite a biografia do autor: ")
+
+
+autor = {
+    "nome": nome_autor,
+    "biografia": biografia_autor
+}
+
+
+titulo_livro = input("Digite o título do livro: ")
+ano_livro = int(input("Digite o ano de publicação do livro: "))
+
+
+livro = {
+    "titulo": titulo_livro,
+    "ano": ano_livro,
+    "autor": autor
+}
+
+
+def exibir_detalhes(livro):
+    print("\n--- Detalhes do Livro ---")
+    print("Título:", livro["titulo"])
+    print("Ano:", livro["ano"])
+    print("Autor:", livro["autor"]["nome"])
+
+
+exibir_detalhes(livro)

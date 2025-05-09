@@ -1,0 +1,24 @@
+import os
+from dataclasses import dataclass
+os.system("cls || clear")
+
+autor = {
+    "nome": "Machado de Assis",
+    "biografia": "Foi um escritor, cronista e poeta brasileiro."
+}
+
+
+livro = {
+    "titulo": "O Alienista",
+    "ano": 1882,
+    "autor": autor
+}
+
+
+def exibir_detalhes(livro):
+    print("Título:", livro["titulo"])
+    print("Ano:", livro["ano"])
+    print("Autor:", livro["autor"]["nome"])
+
+
+exibir_detalhes(livro) 

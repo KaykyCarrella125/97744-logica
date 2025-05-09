@@ -1,0 +1,43 @@
+import os
+from dataclasses import dataclass
+
+os.system("cls || clear")
+
+
+autor = {
+    "nome": "Machado de Assis",
+    "biografia": "Foi um escritor, cronista e poeta brasileiro."
+}
+
+
+livros = []
+
+
+while True:
+    print("\n--- Cadastro de Livro ---")
+    titulo = input("Digite o título do livro: ")
+    ano = int(input("Digite o ano de publicação: "))
+
+    livro = {
+        "titulo": titulo,
+        "ano": ano,
+        "autor": autor
+    }
+
+    livros.append(livro)
+
+    continuar = input("Deseja adicionar outro livro? (sim/não): ").lower()
+    if continuar != 's':
+        break
+
+
+def exibir_detalhes(livros):
+    print("\n--- Lista de Livros ---")
+    for livro in livros:
+        print("Título:", livro["titulo"])
+        print("Ano:", livro["ano"])
+        print("Autor:", livro["autor"]["nome"])
+        print("-" * 30)
+
+
+exibir_detalhes(livros)

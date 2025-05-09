@@ -1,0 +1,41 @@
+import os 
+from dataclasses import dataclass
+
+os.system("cls || clear")
+
+@dataclass
+class Carro:
+    Marca: str
+    Modelo: str
+    Categoria: str
+    Preço: float
+lista_carro = []
+
+
+print("Informe os dados do carro: ")
+for i in range(2):
+        carro = Carro
+        Marca = input("Marca: "),
+        Modelo = input("Modelo: "),
+        Categoria = input("Categoria: "),
+        Preço = float(input("Preço: "))
+
+lista_carro.append(carro)
+print()
+
+print("\n= Exibindo dados do carro = ")
+for carro in lista_carro:
+    arquivo.write(f"Marca: {carro.marca}")
+    arquivo.write(f"Modelo: {carro.modelo}")
+    arquivo.write(f"Categoria: {carro.categoria}")
+    arquivo.write("Preço: R$ {carro.preço:.2f}")
+    arquivo.write("\n")
+
+print("= Salvando os dados dos carros =")
+nome_arquivo = "dados_carros.txt"
+
+with open(nome_arquivo, "a") as arquivo:
+    for carro in lista_carro:
+        arquivo.write(f"{carro.marca}, {carro.modelo}, {carro.categoria}, {carro.preço}\n")
+
+print("\nSalvo com sucesso!")
