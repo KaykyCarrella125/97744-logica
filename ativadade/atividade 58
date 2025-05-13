@@ -1,41 +1,47 @@
-import os 
+import os
 from dataclasses import dataclass
 
-os.system("cls || clear")
+
+os.system("cls" if os.name == "nt" else "clear")
+
 
 @dataclass
 class Carro:
-    Marca: str
-    Modelo: str
-    Categoria: str
-    Preço: float
-lista_carro = []
+    marca: str
+    modelo: str
+    categoria: str
+    preco: float
 
 
-print("Informe os dados do carro: ")
+lista_carros = []
+
+
+print("Informe os dados dos carros:")
 for i in range(2):
-        carro = Carro
-        Marca = input("Marca: "),
-        Modelo = input("Modelo: "),
-        Categoria = input("Categoria: "),
-        Preço = float(input("Preço: "))
+    print(f"\nCarro {i+1}:")
+    marca = input("Marca: ")
+    modelo = input("Modelo: ")
+    categoria = input("Categoria: ")
+    preco = float(input("Preço: "))
 
-lista_carro.append(carro)
-print()
+    carro = Carro(marca, modelo, categoria, preco)
+    lista_carros.append(carro)
 
-print("\n= Exibindo dados do carro = ")
-for carro in lista_carro:
-    arquivo.write(f"Marca: {carro.marca}")
-    arquivo.write(f"Modelo: {carro.modelo}")
-    arquivo.write(f"Categoria: {carro.categoria}")
-    arquivo.write("Preço: R$ {carro.preço:.2f}")
-    arquivo.write("\n")
 
-print("= Salvando os dados dos carros =")
+print("\n= Exibindo dados dos carros =")
+for carro in lista_carros:
+    print(f"Marca: {carro.marca}")
+    print(f"Modelo: {carro.modelo}")
+    print(f"Categoria: {carro.categoria}")
+    print(f"Preço: R$ {carro.preco:.2f}")
+    print("-" * 30)
+
+
 nome_arquivo = "dados_carros.txt"
+print("\n= Salvando os dados dos carros =")
 
-with open(nome_arquivo, "a") as arquivo:
-    for carro in lista_carro:
-        arquivo.write(f"{carro.marca}, {carro.modelo}, {carro.categoria}, {carro.preço}\n")
+with open(nome_arquivo, "a", encoding="utf-8") as arquivo:
+    for carro in lista_carros:
+        arquivo.write(f"{carro.marca}, {carro.modelo}, {carro.categoria}, {carro.preco:.2f}\n")
 
 print("\nSalvo com sucesso!")

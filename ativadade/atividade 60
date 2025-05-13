@@ -1,0 +1,50 @@
+import os
+from dataclasses import dataclass
+
+os.system("cls || clear")
+
+class Funcionario:
+    def __init__(self, nome, data_admissao, matricula, endereco):
+        self.nome = nome
+        self.data_admissao = data_admissao
+        self.matricula = matricula
+        self.endereco = endereco
+
+
+class Cliente:
+    def __init__(self, nome, data_nascimento, endereco):
+        self.nome = nome
+        self.data_nascimento = data_nascimento
+        self.endereco = endereco
+
+
+funcionarios = []
+clientes = []
+
+
+for i in range(3):
+    print(f"\nFuncionário {i+1}:")
+    nome = input("Nome: ")
+    data_admissao = input("Data de admissão: ")
+    matricula = input("Matrícula: ")
+    endereco = input("Endereço: ")
+    funcionarios.append(Funcionario(nome, data_admissao, matricula, endereco))
+
+
+for i in range(3):
+    print(f"\nCliente {i+1}:")
+    nome = input("Nome: ")
+    data_nascimento = input("Data de nascimento: ")
+    endereco = input("Endereço: ")
+    clientes.append(Cliente(nome, data_nascimento, endereco))
+
+
+with open("funcionarios.txt", "w") as f:
+    for funcionario in funcionarios:
+        f.write(f"Nome: {funcionario.nome}, Data de admissão: {funcionario.data_admissao}, Matrícula: {funcionario.matricula}, Endereço: {funcionario.endereco}\n")
+
+with open("clientes.txt", "w") as f:
+    for cliente in clientes:
+        f.write(f"Nome: {cliente.nome}, Data de nascimento: {cliente.data_nascimento}, Endereço: {cliente.endereco}\n")
+
+print("\nDados salvos com sucesso!")

@@ -1,0 +1,37 @@
+import os
+from dataclasses import dataclass
+
+os.system("cls || clear")
+
+@dataclass
+class Livro:
+    def __init__(self, nome, autor, categoria, preco):
+        self.nome = nome
+        self.autor = autor
+        self.categoria = categoria
+        self.preco = preco
+
+
+def ler_dados_catalogo():
+    with open("Catálogo_Livros.txt", "r", encoding="utf-8") as arquivo:
+        livros = []
+        for i in range(3):  
+            nome = arquivo.readline().strip()
+            autor = arquivo.readline().strip()
+            categoria = arquivo.readline().strip()
+            preco = float(arquivo.readline().strip())
+
+            livro = Livro(nome, autor, categoria, preco)
+            livros.append(livro)
+        return livros
+
+
+livros = ler_dados_catalogo()
+
+
+for livro in livros:
+    print("Nome:", livro.nome)
+    print("Autor:", livro.autor)
+    print("Categoria:", livro.categoria)
+    print("Preço: R$", livro.preco)
+    print("-" * 30)
